@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align = "center">
   
 ## User-Response-Prediction-System
@@ -116,3 +117,7 @@ python app.py
 
 
 
+=======
+# AdClickOptimizer
+AdClickOptimizer: Predictive System for Ad Click-Through Rates
+>>>>>>> dce9cddc9eb0137a59a709ec89a093afe25a5f5d
