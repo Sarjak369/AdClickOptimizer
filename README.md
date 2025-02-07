@@ -44,7 +44,7 @@ A machine learning system to predict ad click-through rates (CTR) with **96% acc
 - Develop a machine learning algorithm that predicts if a particular user will click on an advertisement.
 
 
-- The data consists of **10** variables:
+The data consists of **10** variables:
 
 **'Daily Time Spent on Site', 'Age', 'Area Income', 'Daily Internet Usage', 'Ad Topic Line', 'City', 'Male', 'Country', Timestamp' and 'Clicked on Ad'.**
 
@@ -95,19 +95,20 @@ python app.py
 
 
 🌐 Usage
+
 Input user details:
 
-Daily Time Spent (minutes)
+- Daily Time Spent (minutes)
 
-Age
+- Age
 
-Area Income
+- Area Income
 
-Daily Internet Usage
+- Daily Internet Usage
 
-Gender (0/1)
+- Gender (0/1)
 
-Click PREDICT to get the probability of ad click (0 or 1).
+- Click PREDICT to get the probability of ad click (0 or 1).
 
 
 <img width="1199" alt="Example_Input" src="https://github.com/user-attachments/assets/8318ea2d-4ee6-4e0c-9f22-35b1ed257d60" />
@@ -115,8 +116,8 @@ Click PREDICT to get the probability of ad click (0 or 1).
 <img width="1115" alt="Example_Output" src="https://github.com/user-attachments/assets/1a2ce624-8683-4380-b049-8e1bc5c443c9" />
 
 
+
 Optimize your ad strategy today! ✨
 
-Created by Sarjak Maniar
 
 
