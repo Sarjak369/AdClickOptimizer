@@ -1,43 +1,27 @@
-<<<<<<< HEAD
-<div align = "center">
+
+# AdClickOptimizer: Predictive System for Ad Click-Through Rates 🎯
+
+
+A machine learning system to predict ad click-through rates (CTR) with **96% accuracy**, enabling advertisers to optimize ad placements and maximize revenue.
+
+<img width="1404" alt="Home_Page_1" src="https://github.com/user-attachments/assets/2a762413-573b-43a5-92b5-9aa2c70335f1" />
+
+<img width="1404" alt="Home_Page_2" src="https://github.com/user-attachments/assets/130cbd1a-f273-447e-aa44-3457b0d7c24f" />
+
+
+## 📌 Overview
+**AdClickOptimizer** leverages user behavior data to predict whether a user will click on an advertisement. Built with Python, Flask, and Scikit-learn, this project combines statistical analysis, feature engineering, and machine learning to deliver actionable insights for digital advertising campaigns.
+
+## 🚀 Key Features
+- **96% Accuracy**: Achieved using Random Forest and Linear Support Vector Classifier.
+- **Time-Based Feature Engineering**: Extracted **month, day, hour, and weekday** from timestamps to capture temporal patterns.
+- **Feature Selection**: Focused on human-centric features (`Daily Time Spent`, `Age`, `Area Income`, etc.) while omitting noisy categorical variables.
+- **Flask Web App**: Real-time predictions via a user-friendly interface.
+- **Comprehensive Analysis**: EDA, statistical tests (T-test, Mann-Whitney U), and correlation heatmaps.
+
   
-## User-Response-Prediction-System
-<h3> <i> iNeuron Internship Project</i></h3>
-<h4>Project Teammates : Vivek Limbad, Manali Kadam, Rueben Patil, Siddhanth Ghag </h4>
-  
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-ff2d55.svg)](https://www.gnu.org/licenses/gpl-3.0)
-![Lines of code](https://img.shields.io/tokei/lines/github/7Vivek/User-Response-Prediction-System?color=5856d6)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/7Vivek/User-Response-Prediction-System?color=ff9500)
-![GitHub repo size](https://img.shields.io/github/repo-size/7Vivek/User-Response-Prediction-System?color=5ac8fa)
-![GitHub last commit](https://img.shields.io/github/last-commit/7Vivek/User-Response-Prediction-System?color=4cd964)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/7Vivek/User-Response-Prediction-System?color=dd04fa)
-![Relative date](https://img.shields.io/date/1635338107?color=1c80f6)
-![GitHub top language](https://img.shields.io/github/languages/top/7Vivek/User-Response-Prediction-System?color=ffff66)
-![GitHub language count](https://img.shields.io/github/languages/count/7Vivek/User-Response-Prediction-System?color=04e2b5)
-</div>
 
-<h2 align = "center"> 🎬 Project Demo </h2>
 
-<h4>📑 <a href="https://github.com/7Vivek/User-Response-Prediction-System/blob/main/Documentation/User%20Response%20Prediction%20System%20using%20Machine%20Learning%20Techniques.pdf">Documentation</a></h4>
-<h4>🎞 <a href="https://github.com/7Vivek/User-Response-Prediction-System/blob/main/Documentation/Wireframe%20Documentation.pdf">Wireframe</a></h4>
-<h4>📂 <a href="https://github.com/7Vivek/User-Response-Prediction-System/tree/main/Dataset">Dataset</a></h4>
-<h4> ✔ Application is hosted on Heroku. You can see the <a href="https://user-response-prediction.herokuapp.com/">Demo</a></h4>
-
-https://user-images.githubusercontent.com/77670138/139003060-000ff0fd-9b7b-4cb4-aba9-201b8c20b436.mp4
-
-<div align = "center">
-  
-[![python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=darkgreen)](https://github.com/7Vivek/User-Response-Prediction-System/tree/main/Python%20Code)
-[![Made withJupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?style=for-the-badge&logo=Jupyter)](https://github.com/7Vivek/User-Response-Prediction-System/tree/main/Model)
-[![Plotly](https://img.shields.io/badge/Plotly-239120?style=for-the-badge&logo=plotly&logoColor=white)](https://github.com/7Vivek/User-Response-Prediction-System/tree/main/EDA)
-[![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)](https://github.com/7Vivek/User-Response-Prediction-System/tree/main/EDA)
-[![NumPy](https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white)](https://github.com/7Vivek/User-Response-Prediction-System/tree/main/EDA)
-[![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)](https://github.com/7Vivek/User-Response-Prediction-System/blob/main/templates/index.html)
-[![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)](https://github.com/7Vivek/User-Response-Prediction-System/blob/main/static/css/style.css)
-[![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://github.com/7Vivek/User-Response-Prediction-System/blob/main/templates/index.html)
-[![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)](https://github.com/7Vivek/User-Response-Prediction-System/blob/main/app.py)
-[![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)](https://user-response-prediction.herokuapp.com/)
- </div>
 
 <h2>🖱 User-Response-Prediction: What, why, and how ?</h2>
 
@@ -59,7 +43,6 @@ https://user-images.githubusercontent.com/77670138/139003060-000ff0fd-9b7b-4cb4-
 
 - Develop a machine learning algorithm that predicts if a particular user will click on an advertisement.
 
-<h3> 📂 Dataset </h3>
 
 - The data consists of **10** variables:
 
@@ -73,11 +56,18 @@ https://user-images.githubusercontent.com/77670138/139003060-000ff0fd-9b7b-4cb4-
 
 - We have also performed exploratory data analysis to see how **'Daily Time Spent on Site'** in combination with **'Ad Topic Line'** affects the user's decision to click on the ad.
 
-<h2> 🗃 Machine Learning Models </h2>
+## 📌 Overview
+**AdClickOptimizer** leverages user behavior data to predict whether a user will click on an advertisement. Built with Python, Flask, and Scikit-learn, this project combines statistical analysis, feature engineering, and machine learning to deliver actionable insights for digital advertising campaigns.
 
-#### Below are the machine learning models used for this project
+## 🚀 Key Features
+- **96% Accuracy**: Achieved using Random Forest and Linear Support Vector Classifier.
+- **Time-Based Feature Engineering**: Extracted **month, day, hour, and weekday** from timestamps to capture temporal patterns.
+- **Feature Selection**: Focused on human-centric features (`Daily Time Spent`, `Age`, `Area Income`, etc.) while omitting noisy categorical variables.
+- **Flask Web App**: Real-time predictions via a user-friendly interface.
+- **Comprehensive Analysis**: EDA, statistical tests (T-test, Mann-Whitney U), and correlation heatmaps.
 
-### 📝 Experimental Results
+## 📊 Results
+### Model Performance Comparison
 
 | Algorithm                               | Accuracy |
 | :-------------------------------------  | :------- | 
@@ -103,21 +93,30 @@ Go to this app's directory and run
 python app.py
 ```
 
-<h2> 🧩 Contributors </h2>
 
-[![LinkedIn](https://img.shields.io/badge/ManaliKadam-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manali-kadam-aa855b215)
-<br>
-[![LinkedIn](https://img.shields.io/badge/RuebenPatil-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rueben-patil-3b14b91b3)
-<br>
-[![LinkedIn](https://img.shields.io/badge/SiddhanthGhag-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/siddhanth-ghag-68b7511a9)
-<br>
-[![LinkedIn](https://img.shields.io/badge/VivekLimbad-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vivek-limbad-412667215/)
-[![GitHub](https://img.shields.io/badge/VivekLimbad-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/7Vivek)
+🌐 Usage
+Input user details:
+
+Daily Time Spent (minutes)
+
+Age
+
+Area Income
+
+Daily Internet Usage
+
+Gender (0/1)
+
+Click PREDICT to get the probability of ad click (0 or 1).
 
 
+<img width="1199" alt="Example_Input" src="https://github.com/user-attachments/assets/8318ea2d-4ee6-4e0c-9f22-35b1ed257d60" />
+
+<img width="1115" alt="Example_Output" src="https://github.com/user-attachments/assets/1a2ce624-8683-4380-b049-8e1bc5c443c9" />
 
 
-=======
-# AdClickOptimizer
-AdClickOptimizer: Predictive System for Ad Click-Through Rates
->>>>>>> dce9cddc9eb0137a59a709ec89a093afe25a5f5d
+Optimize your ad strategy today! ✨
+
+Created by Sarjak Maniar
+
+
