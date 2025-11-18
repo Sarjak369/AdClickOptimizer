@@ -125,7 +125,7 @@ plt.figure(figsize=(16, 6))
 plt.title("Mean Absolute Error with Number of Estimators of a Random Forest")
 plt.xlabel("Number of Estimators")
 plt.ylabel("Mean Absolute Error")
-plt.plot(scores.keys(), scores.values())
+plt.plot(list(scores.keys()), list(scores.values()))
 plt.show()
 
 
@@ -227,7 +227,7 @@ plt.figure(figsize=(16, 6))
 plt.title("Precision of Linear SVC With Penalty Parameter C")
 plt.ylabel("Precision")
 plt.xlabel("C")
-plt.plot(svc_lin_scores.keys(), svc_lin_scores.values())
+plt.plot(list(svc_lin_scores.keys()), list(svc_lin_scores.values()))
 plt.show()
 
 
@@ -280,7 +280,7 @@ plt.figure(figsize=(16, 6))
 plt.title("Precision of k Nearest Neighbors Classifier With k Nearest Neighbors")
 plt.ylabel("Precision")
 plt.xlabel("k Nearest Neighbors")
-plt.plot(knn_scores.keys(), knn_scores.values())
+plt.plot(list(knn_scores.keys()), list(knn_scores.values()))
 plt.show()
 
 
@@ -323,7 +323,7 @@ rf_fpr, rf_tpr, rf_thresholds = roc_curve(
 svc_lin_fpr, svc_lin_tpr, svc_lin_thresholds = roc_curve(
     y_valid, svc_lin_clf.predict_proba(X_valid)[:, 1])
 knn_fpr, knn_tpr, knn_thresholds = roc_curve(
-    y_valid, knn_clf.predict_proba(X_valid)[:, 1])
+    y_valid, knn_clf.predict_proba(X_valid)[:, 1])  # type: ignore[index]
 
 plt.figure(figsize=(16, 7))
 

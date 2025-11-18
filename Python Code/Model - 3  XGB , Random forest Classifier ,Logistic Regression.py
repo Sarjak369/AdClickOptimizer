@@ -61,7 +61,7 @@ import numpy as np  # linear algebra
 import pandas as pd  # data processing, CSV file I/O (e.g. pd.read_csv)
 import pandas as pd
 import matplotlib.pyplot as plt
-
+from typing import Any
 import seaborn as sns
 
 sns.set_theme(style="whitegrid", context="notebook")
@@ -125,12 +125,15 @@ num_columns = ['Daily Time Spent on Site', 'Age',
 ct = make_column_transformer(
     (MinMaxScaler(), num_columns),
     #     (StandardScaler(), num_columns),
-    remainder='passthrough')
+    remainder='passthrough',
+    sparse_threshold=0.0
+)
 
-X_train = ct.fit_transform(X_train)
-X_test = ct.transform(X_test)
-X_train = pd.DataFrame(X_train, columns=num_columns)
-X_test = pd.DataFrame(X_test, columns=num_columns)
+X_train_arr = ct.fit_transform(X_train)
+X_test_arr = ct.transform(X_test)
+
+X_train = pd.DataFrame(np.asarray(X_train_arr), columns=num_columns)
+X_test = pd.DataFrame(np.asarray(X_test_arr), columns=num_columns)
 
 
 # In[6]:
@@ -179,7 +182,7 @@ print_score(lr_clf, X_train, y_train, X_test, y_test, train=False)
 
 
 pred = lr_clf.predict(X_test)
-pred
+# pred
 
 
 # In[8]:
@@ -239,14 +242,14 @@ testcase = [[30.00, 45, 60000.20, 300.00, 1]]
 
 
 tp = lr_clf.predict(testcase)
-tp
+# tp
 
 
 # In[14]:
 
 
 acc_logreg = round(accuracy_score(pred, y_test)*100, 2)
-acc_logreg
+# acc_logreg
 
 
 # In[15]:
@@ -299,7 +302,7 @@ roc_auc_score(y_test, lr_clf.predict(X_test))
 def plot_roc_curve(fpr, tpr, label=None):
     plt.plot(fpr, tpr, linewidth=2, label=label)
     plt.plot([0, 1], [0, 1], "k--")
-    plt.axis([0, 1, 0, 1])
+    plt.axis((0, 1, 0, 1))
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
     plt.title('ROC Curve')
@@ -420,7 +423,7 @@ coefdf['Coef'] = lrCoef[0]
 coefdf['Absuolute num of Coef'] = abs(lrCoef[0])
 coefdf = coefdf.sort_values(
     by='Absuolute num of Coef', ascending=False).reset_index(drop=True)
-coefdf
+# coefdf
 
 
 # In[32]:
@@ -481,19 +484,29 @@ plt.show()
 
 
 # Calculate permutation importance
-result = permutation_importance(
-    RFmodel, X_test, y_test, n_repeats=10, random_state=42, n_jobs=2)
-sorted_idx = result.importances_mean.argsort()
+result: Any = permutation_importance(
+    RFmodel, X_test, y_test, n_repeats=10, random_state=42, n_jobs=2
+)
+importances = result.importances
+mean_importances = result.importances_mean
+sorted_idx = mean_importances.argsort()
+
 
 # Plot permutation importance
 plt.figure(figsize=(14, 6))
 plt.title('Permutation Importance of Random Forest Classifier', fontsize=18)
-plt.boxplot(result.importances[sorted_idx].T, vert=False,
-            labels=X_test.columns[sorted_idx])  # Ensure labels match columns
+
+
+plt.boxplot(importances[sorted_idx].T, vert=False)
+
+plt.yticks(
+    ticks=range(len(sorted_idx)),
+    labels=X_test.columns[sorted_idx],
+    fontsize=13
+)
 plt.xlabel('Permutation Importance', fontsize=16)
 plt.ylabel('Features', fontsize=16)
 plt.xticks(fontsize=13)
-plt.yticks(fontsize=13)
 plt.grid(axis='x', linestyle='--', alpha=0.6)
 plt.show()
 

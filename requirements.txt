@@ -12,3 +12,9 @@ scipy>=0.15.1
 scikit-learn==1.7.2
 matplotlib>=1.4.3
 pandas>=0.19
+seaborn
+statsmodels
+wordcloud
+shap
+xgboost
+missingno

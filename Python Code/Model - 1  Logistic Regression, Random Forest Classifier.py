@@ -1,10 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# ## Load Libraries
-
-# In[1]:
-
+# Load Libraries
 
 from sklearn.metrics import accuracy_score
 import numpy as np
@@ -32,10 +27,7 @@ warnings.filterwarnings("ignore")
 # get_ipython().run_line_magic('matplotlib', 'inline')
 
 
-# ## Load Data
-
-# In[2]:
-
+# Load Data
 
 # Reading the file
 df = pd.read_csv(r"Dataset/advertising.csv")
@@ -124,7 +116,6 @@ print(X_test.shape, y_test.shape)
 logreg = LogisticRegression()
 # Fit the model on training data using a fit method
 model = logreg.fit(X_train, y_train)
-model
 
 
 # ## Predictions
